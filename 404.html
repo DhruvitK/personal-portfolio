@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(34, 34, 34, 0.8)), url('https://images.unsplash.com/photo-1517842644545-4d257d1b7e5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGdhbWV8ZW58MHx8fHwxNjkyNzIwMTY3&ixlib=rb-1.2.1&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .error-page {
+            text-align: center;
+            background-color: rgba(50, 50, 50, 0.9);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(255, 105, 180, 0.5);
+            transition: transform 0.3s ease;
+            max-width: 80%;
+        }
+        .error-page:hover {
+            transform: scale(1.02);
+        }
+        .error-page h1 {
+            font-size: 120px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .error-page h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .error-page p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .btn-custom {
+            background-color: #0056b3; /* Soft blue color */
+            border-radius: 25px;
+            padding: 12px 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #004494; /* Darker shade on hover */
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .btn-outline-light {
+            border-color: rgba(255,255,255,0.5);
+            color: white; /* Light text color */
+        }
+        .btn-outline-light:hover {
+            background-color: rgba(255,255,255,0.1); /* Subtle hover effect */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        /* New styles for interactive effects */
+        #surpriseMessage {
+            display:none;
+            animation: fadeInMessage 1s ease-in-out forwards; /* Animation for surprise message */
+        }
+
+        @keyframes fadeInMessage {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <h1>404</h1>
+        <h2>It seems the page you are looking for has respawned somewhere else.</h2>
+        <a href="/" class="btn btn-custom btn-lg">Return to Main Menu</a>
+        <div class="mt-4">
+            <i class="bi bi-exclamation-circle" style="font-size:50px;"></i>
+        </div>
+        <p style="margin-top:20px;">If you believe this is an error, please contact support.</p>
+        <p style="font-style: italic;">Explore our latest games and updates!</p>
+        <a href="/games" class="btn btn-outline-light mt-3">Browse Games</a>
+
+        <!-- Interactive Element -->
+        <div class="mt-4">
+            <p id="surpriseMessage" style="font-weight:bold;">🎉 Surprise! Check out our latest game release!</p>
+        </div>
+
+        <!-- Sound effect for interaction -->
+        <audio id="surpriseSound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
+
+        <script>
+            // Automatically show surprise message after a delay
+            setTimeout(function() {
+                document.getElementById('surpriseMessage').style.display = 'block';
+                document.getElementById('surpriseSound').play(); // Play sound on message display
+            }, 2000); // Show surprise message after 2 seconds
+        </script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

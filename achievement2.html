@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement 1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        }
+
+        .achievement-page {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .achievement-icon {
+            font-size: 80px;
+            color: #00e676;
+            margin-bottom: 20px;
+            animation: icon-bounce 1.5s infinite;
+        }
+
+        @keyframes icon-bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .btn-green {
+            background-color: #00e676;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-green:hover {
+            background-color: #00b34d;
+        }
+
+        .certification-container {
+            margin-top: 50px;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .certification-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        .certification-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .certification-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .certification-container:hover .certification-overlay {
+            opacity: 1;
+        }
+
+        .certification-overlay i {
+            color: #00e676;
+            font-size: 50px;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <section class="achievement-page">
+            <i class="fas fa-trophy achievement-icon"></i>
+            <h1 class="fade-in">Achievement 2</h1>
+            <p class="fade-in">Details about achievement 1. This could include descriptions, images, or any other relevant content that highlights this specific achievement.</p>
+
+
+            
+        <a href="index.html" class="btn btn-green mt-4 fade-in">Back to Achievements</a>
+    </section>
+
+    <section style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+            <!-- Your left content here (e.g., description or achievement details) -->
+        </div>
+        <div class="certification-container fade-in" style="flex-shrink: 0; width: 450px; position: relative; margin-left: 200px; margin-top: -60px;">
+            <img src="assets/Certificate.jpg" alt="Certificate" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+            <div class="certification-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); opacity: 0; transition: opacity 0.5s ease; display: flex; align-items: center; justify-content: center;">
+            </div>
+        </div>
+        
+        
+    </section>
+    
+</body>
+</html>

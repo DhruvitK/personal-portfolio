@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Achievement Showcase</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #0d0d0d;
+            color: #d4d4d4;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        .achievement-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #fff;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .achievement-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .achievement-header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 0;
+            font-weight: 300;
+        }
+
+        /* Showcase Container */
+        .achievement-showcase {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: #1e1e1e;
+        }
+
+        .showcase-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            background: #282828;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid #3a3a3a;
+        }
+
+        .showcase-container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Left side - 3D model or GIF */
+        .showcase-model {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1f1f1f;
+            padding: 20px;
+            border-right: 1px solid #3a3a3a;
+        }
+
+        .model-placeholder {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            perspective: 1000px;
+        }
+
+        .model-placeholder img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+
+        .model-placeholder img:hover {
+            transform: rotateY(20deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Right side - Certificate and Details */
+        .showcase-details {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #2c2c2c;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .certificate-image {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .achievement-title {
+            font-size: 2.5rem;
+            color: #99f2c8;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .achievement-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #d4d4d4;
+        }
+
+        .btn-outline-light {
+            color: #99f2c8;
+            border: 2px solid #99f2c8;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-outline-light:hover {
+            background-color: #99f2c8;
+            color: #282828;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .showcase-container {
+                flex-direction: column;
+                border: none;
+                box-shadow: none;
+            }
+
+            .showcase-model {
+                border-right: none;
+                border-bottom: 1px solid #3a3a3a;
+            }
+
+            .showcase-details {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="achievement-header">
+        <h1>Achievement Showcase</h1>
+        <p>Highlighting the milestones and accomplishments</p>
+    </header>
+<!-- Achievement Showcase Section -->
+<section class="achievement-showcase">
+    <div class="showcase-container">
+        <!-- Left Side: Advanced 3D Model Display -->
+        <div class="showcase-model">
+            <div class="model-card">
+                <div class="model-content">
+                    <img title="3D Trophy Model" src="assets/tro.jpg" alt="3D Trophy Model" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Certificate and Achievement Details -->
+        <div class="showcase-details">
+            <img src="assets/certificate.jpg" alt="Certificate" class="certificate-image">
+            <h2 class="achievement-title">Achievement Title</h2>
+            <p class="achievement-description">
+                This is a detailed description of the achievement. It highlights the key points and the significance of this achievement.
+                You can add more information here about the journey, efforts, or impact that led to this accomplishment.
+            </p>
+            <a href="#" class="btn btn-outline-light">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styles for Advanced Design -->
+<style>
+    body {
+        background-color: #121212;
+        color: #d4d4d4;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .achievement-showcase {
+        padding: 60px 20px;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(18, 18, 18, 0.95));
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Animated Background Effect */
+    .achievement-showcase::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('path/to/your/animated-background.gif') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1; /* Subtle background effect */
+        z-index: 0;
+    }
+
+    .showcase-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+        position: relative; /* Positioning for z-index */
+        z-index: 1; /* Bring content above background */
+    }
+
+    .showcase-model {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+    }
+
+    .model-card {
+        width: 100%;
+        max-width: 450px;
+        padding: 30px;
+        background: rgba(18, 18, 18, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .model-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .model-content {
+        border-radius: 12px;
+        padding: 20px;
+        position: relative; /* For overlay */
+        overflow: hidden; /* For rounded corners */
+    }
+
+    .model-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .model-card:hover .model-content img {
+        transform: scale(1.1);
+    }
+
+    .showcase-details {
+        max-width: 400px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+    }
+
+    .showcase-details:hover {
+        transform: translateY(-5px);
+    }
+
+    .certificate-image {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .certificate-image:hover {
+        transform: scale(1.05);
+    }
+
+    .achievement-title {
+        font-size: 2.5rem;
+        color: #00e676;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .achievement-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .btn-outline-light {
+        color: #00e676;
+        border: 2px solid #00e676;
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #00e676;
+        color: #121212;
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+        .showcase-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+</body>
+
+</html>
